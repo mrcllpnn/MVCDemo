@@ -1,0 +1,34 @@
+﻿@model MyPortfolio.Models.Artist
+
+
+    <div ng-controller="SearchController" class="container">
+
+        <div class="row col-xs-12 centered">
+
+            <h1>Simular Music Artist Search</h1>
+            <p>Enter a name to search using <a href="http://www.last.fm/api/intro">last.fm</a></p>
+                       
+                <input name="artistName" ng-model="artist" type="text" class="form-control" placeholder="Search">
+          
+            <button name="operation" ng-click="searchArtist(artist)" type="submit" id="submit" class="btn btn-large btn-primary"><span class="glyphicon glyphicon-search"></span>&nbsp;&nbsp;Search</button>
+
+            <div ng-show="loading" id="processing">
+                <img src="~/Images/ripple.gif" alt="Loading, Please wait..." />
+            </div>
+
+        </div>
+
+        <div id="artistgrid" class="">
+            <div ng-repeat="artist in Artists" class="rig" col-sm-3 col-xs-6>
+               
+                    <a href="{{ artist.page }}">
+                        <img ng-src="{{ artist.image }}" class="card" />
+                    </a>
+
+                    <h3><a href="{{ artist.page }}">{{ artist.name }}</a></h3>
+               
+            </div>
+        </div>
+
+    </div>
+

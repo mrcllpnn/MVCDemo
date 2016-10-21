@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewBag.Title - .NET MVC BootStrap3 Application</title>
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <!--[if IE]>
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="~/Content/bootstrap.css" rel="stylesheet">
+    <link href="~/Content/main.css" rel="stylesheet" />
+    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,700' rel='stylesheet' type='text/css'>
+    <script src="~/Scripts/jquery.min.js"></script>     
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.10/angular.min.js"></script>
+    <script src="~/Scripts/app.js"></script>
+</head>
+<body ng-app="searchApp">
+    <div id="navigation" class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="@Url.Action("Index", "Home")"><b>Marcell</b></a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="@Url.Action("Index", "Home")" class="elements"><span>Home</span></a></li>
+                    <li><a href="@Url.Action("ArtistSearch", "Home")" class="elements"><span>Artist Search</span></a></li>                    
+                </ul>
+            </div>
+        </div>
+    </div>
+    @RenderBody()
+    <div id="c">
+        <div class="container">
+            <!--<p>Original Bootstrap theme created by <a href="http://www.blacktie.co">BLACKTIE.CO</a></p>-->
+            <p>&copy; @DateTime.Now.Year - Marcell Penn</p>
+        </div>
+    </div>
+        <script src="~/Scripts/bootstrap.js"></script>
+    </body>
+</html>
