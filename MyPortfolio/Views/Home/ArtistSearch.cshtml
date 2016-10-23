@@ -2,7 +2,7 @@
 
     <div ng-controller="SearchController" class="container">
 
-        <div class="row col-xs-12 centered">
+        <div class="text-center">
 
             <h1>Simular Music Artist Search</h1>
             <p>Enter a name to search using <a href="http://www.last.fm/api/intro">last.fm</a></p>
@@ -17,15 +17,14 @@
 
         </div>
 
-        <div id="artistgrid" class="">
-            <div ng-repeat="artist in Artists" class="rig" col-sm-3 col-xs-6>
-               
-                    <a href="{{ artist.page }}">
-                        <img ng-src="{{ artist.image }}" class="card" />
-                    </a>
-
-                    <h3><a href="{{ artist.page }}">{{ artist.name }}</a></h3>
-               
+        <div class="results text-center">
+            <div ng-repeat="artist in Artists" class="card artist">
+                <a href="{{ artist.page }}" class="card-img-top">
+                    <img ng-src="{{ artist.image }}" class="card" />
+                </a>
+                <div class="card-block">
+                    <a href="{{ artist.page }}">{{ artist.name }}</a>
+                </div>
             </div>
         </div>
 

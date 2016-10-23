@@ -11,43 +11,38 @@
         </div>
     </div>
 </div>
-<section id="technologies"></section>
-<div>
-    <div class="container">
-        <div class="row centered">
-            <h1>About this Site</h1>
-            <div class="col-lg-4 col-md-4 col-sm-4">
-                <h3>.NET MVC 4</h3>
-                <p>
-                    This site was built as a demo of different technologies used to make fun web and mobile apps. As a developer, I can be assigned to 
-                    add features like this into an existing site. Instead of music artist, the data can be geo data, products, documents, or even thumbnails of other web pages. 
-                    I used an existing web design but I heavily modified it to fit this purpose. A majority of the programming logic is in the jQuery and C# MVC Controller. The
-                    complete site source code can be downloaded below. 
-                </p>
-            </div>
-            <div class="col-lg-4 col-md-4 col-sm-4">
-                <h3>Twitter Bootstrap 3 / AngularJS</h3>
-                <p>
-                    The layout you are viewing is done with Twitter Bootstrap 3. A BootStrap Grid was used to display the search results according to your screen size. To see this in action, view the site 
-                    on a laptop or PC. You will notice some content is placed in a row from left to right. After you view this site from a smaller screen phone, you will 
-                    notice the same content is now "stacked" top to bottom. This makes me more productive by building one page that looks great in large or small screens. 
-                </p>
-            </div>
-            <div class="col-lg-4 col-md-4 col-sm-4">
-                <h3>Last.fm API</h3>
-                <p>
-                    I used <a href="http://www.last.fm/api/intro">last.fm</a> as a demo service since it was free and more fun than a weather forecast demo.
-                    Aside from the nonstandard XML returned, it was a quick and straight forward project.
-                </p>
-            </div>
+<div class="container">
+    <div class="row centered">
+        <h1>About this Site</h1>
+        <div class="col-lg-4 col-md-4 col-sm-4">
+            <h3>.NET MVC 4</h3>
+            <p>
+                This site was built as a demo of different technologies used to make fun web and mobile apps. As a developer, I can be assigned to
+                add features like this into an existing site. Instead of music artists, the data can be geo data, products, documents, or even thumbnails of other web pages.
+                I used an existing web design but I heavily modified it to fit this purpose. A majority of the programming logic is in the AngularJS and C# MVC Controller. The
+                complete site source code can be downloaded below.
+            </p>
         </div>
-
-        <a href="https://github.com/mrcllpnn/AngularJS">
-            <button type="button" class="btn btn-primary btn-lg">View Source&nbsp;&nbsp;&nbsp;<span class="glyphicon glyphicon-cloud-download"></span></button>
-        </a>
-        <br />
-        <br />
+        <div class="col-lg-4 col-md-4 col-sm-4">
+            <h3>Twitter Bootstrap 3 / AngularJS</h3>
+            <p>
+                The layout you are viewing is done with Twitter Bootstrap 3. A BootStrap Grid was used to display the search results according to your screen size. To see this in action, view the site
+                on a laptop or PC. You will notice some content is placed in a row from left to right. After you view this site from a smaller screen phone, you will
+                notice the same content is now "stacked" top to bottom. This makes me more productive by building one page that looks great in large or small screens.
+            </p>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-4">
+            <h3>Last.fm API</h3>
+            <p>
+                I used <a href="http://www.last.fm/api/intro">last.fm</a> as a demo service since it was free and more fun than a weather forecast demo.
+                Aside from the nonstandard XML returned, it was a quick and straight forward project.
+            </p>
+        </div>
     </div>
+    <div class="text-center" ng-controller="HomeController">
+        <button type="button" ng-click="openLink()" class="btn btn-primary btn-lg">View Source&nbsp;&nbsp;&nbsp;<span class="glyphicon glyphicon-cloud-download"></span></button>
+    </div>
+    <br />
+    <br />
 </div>
-
 
