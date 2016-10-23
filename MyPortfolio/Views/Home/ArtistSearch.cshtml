@@ -1,8 +1,8 @@
 ﻿@model MyPortfolio.Models.Artist
 
-    <div ng-controller="SearchController" class="container">
+    <div ng-controller="SearchController" ng-submit="searchArtist(artist)" class="container">
 
-        <div class="text-center">
+        <form class="text-center">
 
             <h1>Simular Music Artist Search</h1>
             <p>Enter a name to search using <a href="http://www.last.fm/api/intro">last.fm</a></p>
@@ -15,7 +15,7 @@
                 <img src="~/Images/ripple.gif" alt="Loading, Please wait..." />
             </div>
 
-        </div>
+        </form>
 
         <div class="results text-center">
             <div ng-repeat="artist in Artists" class="card artist">
