@@ -37,13 +37,16 @@
             </div>
         </div>
     </div>
+
     @RenderBody()
-    <div id="c">
-        <div class="container">
-            <!--<p>Original Bootstrap theme created by <a href="http://www.blacktie.co">BLACKTIE.CO</a></p>-->
-            <p>&copy; @DateTime.Now.Year - Marcell Penn</p>
-        </div>
-    </div>
+        
+        <footer class="footer navbar-fixed-bottom">
+            <div class="container">
+                <!--<p>Original Bootstrap theme created by <a href="http://www.blacktie.co">BLACKTIE.CO</a></p>-->
+                <p>&copy; @DateTime.Now.Year - Marcell Penn</p>
+            </div>
+        </footer>
+
         <script src="~/Scripts/bootstrap.js"></script>
     </body>
 </html>
