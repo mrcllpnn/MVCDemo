@@ -1,32 +1,32 @@
 ﻿@model MyPortfolio.Models.Artist
 
-    <div ng-controller="SearchController" ng-submit="searchArtist(artist)" class="container">
+<div ng-controller="SearchController" ng-submit="searchArtist(artist)" class="container">
 
-        <form class="text-center">
+    <form class="text-center">
 
-            <h1>Simular Music Artist Search</h1>
-            <p>Enter a name to search using <a href="http://www.last.fm/api/intro">last.fm</a></p>
-                       
-                <input name="artistName" ng-model="artist" type="text" class="form-control" placeholder="Search">
-          
-            <button name="operation" ng-click="searchArtist(artist)" type="submit" id="submit" class="btn btn-large btn-primary"><span class="glyphicon glyphicon-search"></span>&nbsp;&nbsp;Search</button>
+        <h1>Simular Music Artist Search</h1>
+        <p>Enter a name to search using <a href="http://www.last.fm/api/intro">last.fm</a></p>
 
-            <div ng-show="loading" id="processing">
-                <img src="~/Images/ripple.gif" alt="Loading, Please wait..." />
-            </div>
+        <input name="artistName" ng-model="artist" type="text" class="form-control" placeholder="Search">
 
-        </form>
+        <button name="operation" ng-click="searchArtist(artist)" type="submit" id="submit" class="btn btn-large btn-primary"><span class="glyphicon glyphicon-search"></span>&nbsp;&nbsp;Search</button>
 
-        <div class="results text-center">
-            <div ng-repeat="artist in Artists" class="card artist">
-                <a href="{{ artist.page }}" class="card-img-top">
-                    <img ng-src="{{ artist.image }}" class="card" />
-                </a>
-                <div class="card-block">
-                    <a href="{{ artist.page }}">{{ artist.name }}</a>
-                </div>
-            </div>
+        <div ng-show="loading" id="processing">
+            <img src="~/Images/ripple.gif" alt="Loading, Please wait..." />
         </div>
 
+    </form>
+
+    <div class="results text-center">
+        <div ng-repeat="artist in Artists" class="card artist">
+            <a href="{{ artist.page }}" class="card-img-top">
+                <img ng-src="{{ artist.image }}" class="card" />
+            </a>
+            <div class="card-block">
+                <a href="{{ artist.page }}">{{ artist.name }}</a>
+            </div>
+        </div>
     </div>
+
+</div>
 
